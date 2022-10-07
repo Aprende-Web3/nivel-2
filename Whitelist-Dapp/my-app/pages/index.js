@@ -226,7 +226,7 @@ export default function Home() {
  
  
       <footer className={styles.footer}>
-        Hecho con &#10084; por Crypto Devs
+        Hecho con &#10084; por AW3 Devs
       </footer>
     </div>
   );
