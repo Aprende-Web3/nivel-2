@@ -20,7 +20,7 @@ async function main() {
     fakeNftMarketplace.address,
     AW3DEVS_NFT_CONTRACT_ADDRESS,
     {
-      // Esto supone que su cuenta tiene al menos 0.01 ETH 
+      // Esto supone que su cuenta tiene al menos 0.1 ETH 
       // Cambie este valor como desee
       value: ethers.utils.parseEther("0.1"),
     }
