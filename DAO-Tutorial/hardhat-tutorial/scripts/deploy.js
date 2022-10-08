@@ -22,7 +22,7 @@ async function main() {
     {
       // Esto supone que su cuenta tiene al menos 0.01 ETH 
       // Cambie este valor como desee
-      value: ethers.utils.parseEther("0.01"),
+      value: ethers.utils.parseEther("0.1"),
     }
   );
   await aw3DevsDAO.deployed();
@@ -38,4 +38,3 @@ main()
     console.error(error);
     process.exit(1);
   });
-

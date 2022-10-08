@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  
  
 // Añadiremos las Interfaces aquí
- /**
+/**
  * Interface para el FakeNFTMarketplace
  */
 interface IFakeNFTMarketplace {
@@ -47,6 +47,7 @@ interface IAW3DevsNFT {
 }
 
  
+ 
 contract AW3DevsDAO is Ownable {
     // Escribiremos el código de contrato aquí
     // Crear una estructura denominada Proposal que contenga toda la información relevante
@@ -64,12 +65,10 @@ struct Proposal {
     // voters - un mapping de tokens AW3DevsNFT a booleanos que indique si ese NFT ya se ha utilizado para emitir un voto o no
     mapping(uint256 => bool) voters;
 }
-
 // Crear un mapping de ID a la propuesta
 mapping(uint256 => Proposal) public proposals;
 // Número de propuestas que se han creado
 uint256 public numProposals;
-
 IFakeNFTMarketplace nftMarketplace;
 IAW3DevsNFT aw3DevsNFT;
 
@@ -86,7 +85,6 @@ modifier nftHolderOnly() {
     require(aw3DevsNFT.balanceOf(msg.sender) > 0, "NOT_A_DAO_MEMBER");
     _;
 }
-
 /// @dev createProposal permite a un titular de AW3DevsNFT crear una nueva propuesta en la DAO
 /// @param _nftTokenId - el tokenID del NFT que se comprará en FakeNFTMarketplace si esta propuesta se aprueba
 /// @return Devuelve el índice de propuestas de la propuesta recién creada.
@@ -155,6 +153,8 @@ function voteOnProposal(uint256 proposalIndex, Vote vote)
         proposal.nayVotes += numVotes;
     }
 }
+
+
 // Crear un modificador que sólo permita que una función sea
 // llamada si se ha superado el plazo de las propuestas dadas
 // y si la propuesta aún no se ha ejecutado

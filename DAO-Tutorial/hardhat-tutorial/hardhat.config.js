@@ -16,7 +16,5 @@ module.exports = {
   },
 };
 
-/*
-FakeNFTMarketplace deployed to:  0x9a3Ceab51702f8bCAa4A741A0897e13C93bc3CE4
-AW3DevsDAO deployed to:  0xBf8651761d2bdCE348dD331AA29FeA1413109E62
-*/
+// FakeNFTMarketplace deployed to:  0xD6f22c039dC615a0A7541ACB8131CcCA63dfb19E
+// AW3DevsDAO deployed to:  0xDf9f6e31F111f7073B76C88b788aD6A26Be03dDA
